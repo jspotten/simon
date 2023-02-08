@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset = "UTF-8"/>
+        <meta name = "viewport" content = "width = device-width, initial-scale = 2.0"/>
+        <title>Simon Memory Game</title>
+        <link rel = "icon" href = "favicon.ico"/>
+    </head>
+
+    <body>
+        <header>
+           <h1 style = "font-size: 500%;">Simon<sup style = "font-size: 100%;">&reg;</sup></h1>
+           <nav>
+                <menu>
+                    <li style = "font-size: x-large;"><a href = "gameIndexPage.html">Home</a></li>
+                    <li style = "font-size: x-large;"><a href = "playGame.html">Play New Game</a></li>
+                    <li style = "font-size: x-large;"><a href = "gameScore.html">Score Board</a></li>
+                    <li style = "font-size: x-large;"><a href = "aboutGame.html">About Game</a></li>
+                </menu>
+           </nav>
+           <hr />
+        </header>
+
+        <main>
+            <div class = "Players">
+                Player:
+                <span class = "player_name">Anonymous Player</span>
+            </div>
+            <br /><br />
+            <div>
+                <label for = "point_count">Score</label>
+                <input type = "number" id = "point_count" value = "--" readonly>
+            </div>
+
+            <div><button>Reset Game</button></div>
+
+            <div>
+                <table>
+                    <tr>
+                        <!-- Top Left Green Button for Simon Game-->
+                        <td>
+                            <button>
+                                <svg
+                                    aria-hidden = "true"
+                                    viewBox = "0 0 100 100"
+                                    height = "100"
+                                    width = "100"
+                                > 
+                                    <path d = "M 95,5 95,95 5,95 Q 5,5 95,5" fill = "green"/>
+                                </svg>
+                            </button>
+                        </td>
+                        <!-- Top Right Red Button for Simon Game-->
+                        <td>
+                            <button>
+                                <svg
+                                    aria-hidden = "true"
+                                    viewBox = "0 0 100 100"
+                                    height = "100"
+                                    width = "100"
+                                > 
+                                    <path d = "M 5,5 5,95 95,95 Q 95,5 5,5" fill = "red"/>
+                                </svg>
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <!-- Bottom Left Blue Button for Simon Game-->
+                        <td>
+                            <button>
+                                <svg
+                                    aria-hidden = "true"
+                                    viewBox = "0 0 100 100"
+                                    height = "100"
+                                    width = "100"
+                                > 
+                                    <path d = "M 5,5 95,5 95,95 Q 5,95 5,5" fill = "blue"/>
+                                </svg>
+                            </button>
+                        </td>
+                        <!-- Bottom Right Yellow Button for Simon Game-->
+                        <td>
+                            <button>
+                                <svg
+                                    aria-hidden = "true"
+                                    viewBox = "0 0 100 100"
+                                    height = "100"
+                                    width = "100"
+                                > 
+                                    <path d = "M 95,5 5,5 5,95 Q 95,95 95,5" fill = "yellow"/>
+                                </svg>
+                            </button>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </main>
+    
+        <footer>
+            <hr />
+            <span class = "authors">Author Name(s)</span>
+            <br />
+            To see the code that makes this game work, check out the following repository:
+            <br />
+            <a href = "https://github.com/jespotten/simon">Github</a>
+        </footer>
+    </body>
+</html>
