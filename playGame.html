@@ -32,73 +32,18 @@
                 Player:
                 <span class = "player_name">Anonymous Player</span>
             </div>
-            <br />
-            <div>
-                <label for = "point_count">Score</label>
-                <input type = "number" id = "text" value = "--" readonly>
-            </div>
-            <br />
-            <div><button>Reset Game</button></div>
-
-            <div>
-                <table>
-                    <tr>
-                        <!-- Top Left Green Button for Simon Game-->
-                        <td>
-                            <button>
-                                <svg
-                                    aria-hidden = "true"
-                                    viewBox = "0 0 100 100"
-                                    height = "100"
-                                    width = "100"
-                                > 
-                                    <path d = "M 95,5 95,95 5,95 Q 5,5 95,5" fill = "green"/>
-                                </svg>
-                            </button>
-                        </td>
-                        <!-- Top Right Red Button for Simon Game-->
-                        <td>
-                            <button>
-                                <svg
-                                    aria-hidden = "true"
-                                    viewBox = "0 0 100 100"
-                                    height = "100"
-                                    width = "100"
-                                > 
-                                    <path d = "M 5,5 5,95 95,95 Q 95,5 5,5" fill = "red"/>
-                                </svg>
-                            </button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <!-- Bottom Left Blue Button for Simon Game-->
-                        <td>
-                            <button>
-                                <svg
-                                    aria-hidden = "true"
-                                    viewBox = "0 0 100 100"
-                                    height = "100"
-                                    width = "100"
-                                > 
-                                    <path d = "M 5,5 95,5 95,95 Q 5,95 5,5" fill = "blue"/>
-                                </svg>
-                            </button>
-                        </td>
-                        <!-- Bottom Right Yellow Button for Simon Game-->
-                        <td>
-                            <button>
-                                <svg
-                                    aria-hidden = "true"
-                                    viewBox = "0 0 100 100"
-                                    height = "100"
-                                    width = "100"
-                                > 
-                                    <path d = "M 95,5 5,5 5,95 Q 95,95 95,5" fill = "yellow"/>
-                                </svg>
-                            </button>
-                        </td>
-                    </tr>
-                </table>
+            </div class = "game-board">
+                <div class = "game-buttons">
+                    <button id = "button-quadrant-1"></button>
+                    <button id = "button-quadrant-2"></button>
+                    <button id = "button-quadrant-3"></button>
+                    <button id = "button-quadrant-4"></button>
+                    <div class = "info-board">
+                        <div id = "game-name">Simon<sup>&reg;</sup></div>
+                        <div id = "score-counter">--</div>
+                        <button class = "btn btn-secondary">Reset</button>
+                    </div>
+                </div>
             </div>
         </main>
     
