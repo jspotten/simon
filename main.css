@@ -61,3 +61,10 @@ main p
     font-size: large;
     font-weight: 500;
  }
+
+ #about
+ {
+    color: lightgrey;
+    font-size: x-large;
+    max-width: 80ch;
+ }
