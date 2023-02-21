@@ -146,18 +146,19 @@ main p
  {
     position: absolute;
     border-radius: 100%;
-    width: 175px;
-    height: 175px;
+    width: 185px;
+    height: 185px;
     background-color: black;
     display: flex;
     align-items: center;
     justify-content: space-around;
     flex-direction: column;
+    padding: 7px;
  }
 
 #game-name
 {
-    color: lightgray;
+    color: whitesmoke;
     font-weight: bold;
     font-size: 2em;
     margin-bottom: 0.1em;
@@ -165,7 +166,13 @@ main p
 
  #score-counter
  {
-
+    background-color: lightgray;
+    width: 60px;
+    height: 40px;
+    text-align: center;
+    border-radius: 20%;
+    font-size: 22px;
+    border: 3px solid rgb(75, 75, 75)
  }
 
  .centered
@@ -174,3 +181,22 @@ main p
     left: 50%;
     transform: translateX(-50%) translateY(-50%)
  }
+
+ @media (max-width: 700px) or (max-height: 600px)
+ {
+    header
+    {
+        display: none;
+    }
+
+    footer
+    {
+        display: none;
+    }
+
+    main
+    {
+        flex: 1 100vh;
+    }
+}
+
