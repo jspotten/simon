@@ -187,6 +187,18 @@ class Game
             }
         }
     }
+
+    async reset()
+    {
+        this.allowPlayer = false;
+        this.playerPlaybackPos = 0;
+        this.sequence = [];
+        this.updateScore('--');
+        await this.buttonDance(1);
+        this.addButton();
+        await this.playSequence();
+        this.allowPlayer = true;
+    }
 }
 
 const game = new Game();

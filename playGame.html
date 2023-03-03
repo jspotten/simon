@@ -11,7 +11,7 @@
               crossorigin="anonymous"
         />
         <link rel = "stylesheet" href = "main.css"/>
-    
+        <script src = "play.js"></script>
     </head>
 
     <body class = "bg-danger text-dar">
@@ -34,14 +34,14 @@
             </div>
             <div class = "game-board">
                 <div class = "game-buttons">
-                    <button class = "game-button" id = "button-quadrant-1"></button>
-                    <button class = "game-button" id = "button-quadrant-2"></button>
-                    <button class = "game-button" id = "button-quadrant-3"></button>
-                    <button class = "game-button" id = "button-quadrant-4"></button>
+                    <button class = "game-button" id = "button-quadrant-1" onclick = "game.pressButton(this)"></button>
+                    <button class = "game-button" id = "button-quadrant-2" onclick = "game.pressButton(this)"></button>
+                    <button class = "game-button" id = "button-quadrant-3" onclick = "game.pressButton(this)"></button>
+                    <button class = "game-button" id = "button-quadrant-4" onclick = "game.pressButton(this)"></button>
                     <div class = "info-board centered">
                         <div id = "game-name">Simon<sup>&reg;</sup></div>
                         <div id = "score-counter">--</div>
-                        <button class = "btn btn-secondary">Reset</button>
+                        <button class = "btn btn-secondary" onclick = "game.reset()">Reset</button>
                     </div>
                 </div>
             </div>
