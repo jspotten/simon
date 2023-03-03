@@ -78,11 +78,64 @@ class Game
         return localStorage.getItem('userName') ?? 'Anonymous Player';
     }
 
+    async pressButton(button)
+    {
+        if(this.allowPlayer)
+        {
+            this.allowPlayer = false;
+            await this.buttons.get(button.id).press(1.0);
+
+            if(this.sequence[this.playerPlaybackPos].el.id === button.id)
+            {
+                this.playerPlaybackPos++;
+                if(this.playerPlaybackPos === this.sequence.length)
+                {
+                    this.playerPlaybackPos = 0;
+                    this.addButton();
+                    this.updateScore(this.sequence.length - 1);
+                    await this.playSequence();
+                }
+                this.allowPlayer = true;
+            }
+            else
+            {
+                this.saveScore(this.sequence.length - 1);
+                this.mistakeSound.play();
+                await this.buttonDance(2);
+            }
+        }
+    }
+
+    addButton()
+    {
+        const btn = this.getRandomButton();
+        this.sequence.push(btn);
+    }
+
+    getRandomButton()
+    {
+        let buttons = Array.from(this.buttons.values());
+        return buttons[Math.floor(Math.random() * this.buttons.size)];
+    }
+
+    updateScore(score)
+    {
+        const scoreEl = document.querySelector('#score-counter');
+        scoreEl.textContent = score;
+    }
+
     async playSequence()
     {
         await delay(500);
+        for(const btn of this.sequence)
+        {
+            await btn.press(1.0);
+            await delay(100);
+        }
     }
 }
+
+const game = new Game();
 
 function delay(ms)
 {
