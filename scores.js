@@ -4,6 +4,7 @@ function loadScores()
     const scoresText = localStorage.getItem('scores');
     if(scoresText)
     {
+        console.log(scoresText);
         scores =  JSON.parse(scoresText);
     }
 
@@ -11,6 +12,7 @@ function loadScores()
 
     if(scores.length)
     {
+        console.log('In element creation if.');
         for(const [i, score] of scores.entries())
         {
             const positionTdEl = document.createElement('td');
@@ -36,6 +38,6 @@ function loadScores()
     {
         tableBodyEl.innerHTML = '<tr><td colSpan=4>Be the first to score</td></tr>';
     }
-
-    loadScores();
 }
+
+loadScores();

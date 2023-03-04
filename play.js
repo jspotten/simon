@@ -120,7 +120,7 @@ class Game
 
     updateScore(score)
     {
-        const scoreEl = document.querySelector('#score-counter');
+        const scoreEl = document.querySelector("#score-counter");
         scoreEl.textContent = score;
     }
 
