@@ -70,7 +70,6 @@ class Game
         });
         
         const playerNameEl = document.querySelector(".playerName");
-        console.log(playerNameEl);
         playerNameEl.textContent = this.getPlayerName();
     }
 
