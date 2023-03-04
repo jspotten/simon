@@ -4,7 +4,6 @@ function loadScores()
     const scoresText = localStorage.getItem('scores');
     if(scoresText)
     {
-        console.log(scoresText);
         scores =  JSON.parse(scoresText);
     }
 
