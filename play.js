@@ -68,8 +68,9 @@ class Game
                 this.buttons.set(el.id, new Button(btnDescriptions[i], el));
             }
         });
-
-        const playerNameEl = document.querySelector('.player_name');
+        
+        const playerNameEl = document.querySelector(".playerName");
+        console.log(playerNameEl);
         playerNameEl.textContent = this.getPlayerName();
     }
 

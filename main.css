@@ -78,9 +78,9 @@ main p
     font-weight: bold;
  }
 
- .player_name
+ .playerName
  {
-    color: rgb(0, 0, 0) !important;
+    color: lightgray;
  }
 
  .game
